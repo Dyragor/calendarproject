@@ -50,8 +50,13 @@
       <file leaf-file-name="CalendarController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calendar/CalendarController.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="714">
               <caret line="46" column="61" lean-forward="true" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+=======
+            <state relative-caret-position="-133">
+              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +77,8 @@
       <file leaf-file-name="CalendarView.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/calendar/CalendarView.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="266">
+              <caret line="21" column="99" lean-forward="true" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -93,8 +98,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/notiz/Main.java" />
-        <option value="$PROJECT_DIR$/src/calendar/CalendarView.fxml" />
         <option value="$PROJECT_DIR$/src/calendar/Main.java" />
+        <option value="$PROJECT_DIR$/src/calendar/CalendarView.fxml" />
         <option value="$PROJECT_DIR$/src/calendar/CalendarController.java" />
         <option value="$PROJECT_DIR$/src/calendar/EditView.fxml" />
         <option value="$PROJECT_DIR$/src/calendar/CalendarEditController.java" />
@@ -168,10 +173,14 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../1. Semester/Modul 120/Notizzettel/Notiz" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+=======
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 2.0/JavaFX Scene Builder 2.0.exe" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -634,13 +643,21 @@
       <workItem from="1497249174173" duration="1027000" />
       <workItem from="1497250300238" duration="586000" />
       <workItem from="1497271264597" duration="1745000" />
+<<<<<<< HEAD
       <workItem from="1497873203078" duration="1128000" />
       <workItem from="1497874623714" duration="1159000" />
+=======
+      <workItem from="1497873203078" duration="2181000" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5710000" />
+=======
+    <option name="totallyTimeSpent" value="5604000" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -860,6 +877,7 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/calendar/EditView.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -872,6 +890,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/calendar/CalendarController.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/calendar/Main.java">
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="46" column="61" lean-forward="true" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
@@ -881,18 +902,43 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/calendar/CalendarEditController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+=======
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/application/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-901">
+          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/calendar/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/calendar/CalendarView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="21" column="99" lean-forward="true" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/calendar/CalendarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+>>>>>>> 87c74bf53209c1d42aa00c42b0d455ceee0caa7c
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

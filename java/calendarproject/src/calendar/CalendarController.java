@@ -43,39 +43,22 @@ public class CalendarController {
     }
 
 	@FXML
-    private void handleEditNotiz(ActionEvent event) throws IOException {
-        Calendar selectedCalendar = myListView.getSelectionModel().getSelectedItem();
-        if (selectedCalendar != null) {
+    private void handleEditDay(ActionEvent event) throws IOException {
+		Stage stage;
+		AnchorPane root;
 
-        	Stage stage;
-        	AnchorPane root;
+		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
+		root = myLoader.load();
+		CalendarEditController controller = myLoader.getController();
 
-       		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
-    		root = (AnchorPane) myLoader.load();
-    		CalendarEditController controller = (CalendarEditController) myLoader.getController();
-    		controller.setCalendar(selectedCalendar);
+		stage = new Stage();
+		stage.setScene(new Scene(root));
+		stage.setTitle("//TODO: DATUM");
+		stage.initModality(Modality.APPLICATION_MODAL);
 
-        	stage = new Stage();
-        	stage.setScene(new Scene(root));
-        	stage.setTitle("Edit Note Dialog");
-        	stage.initModality(Modality.APPLICATION_MODAL);
-
-        	stage.initOwner(prevStage);
-        	controller.setPrevStage(stage);
-        	stage.showAndWait();
-
-        	myListView.refresh();
-
-		} else {
-	        // Nothing selected.
-	        Alert alert = new Alert(AlertType.WARNING);
-	        alert.initOwner(prevStage);
-	        alert.setTitle("No Selection");
-	        alert.setHeaderText("No note selected");
-	        alert.setContentText("Select a note first");
-
-	        alert.showAndWait();
-	    }
+		stage.initOwner(prevStage);
+		controller.setPrevStage(stage);
+		stage.showAndWait();
     }
 
 	@FXML
