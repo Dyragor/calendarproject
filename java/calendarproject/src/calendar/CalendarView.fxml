@@ -18,12 +18,13 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Datei">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleEditNotiz" text="Hilfe" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteNotiz" text="Beenden" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="Hilfe" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleClose" text="Beenden" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
+            <Button layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleEditDay" text="Test" />
          </children>
       </Pane>
    </children>
