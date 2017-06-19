@@ -21,8 +21,6 @@ import javafx.stage.Stage;
 public class CalendarController {
 
 	@FXML
-	private ListView<Calendar> myListView;
-	private ObservableList<Calendar> listViewData = FXCollections.observableArrayList();
 	private	Stage prevStage;
 	private Main main;
 

@@ -41,11 +41,7 @@ public class CalendarEditController {
 	
     @FXML
 	private void initialize() {
-    	
-    	okEditButton.setOnAction((event) -> {
-    		calendar.setText(editTextArea.getText());
-    		stage.close();
-		});
+
     }
 }
 
