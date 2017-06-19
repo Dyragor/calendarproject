@@ -1,9 +1,13 @@
 package calendar;
 
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class CalendarEditController {
 	
@@ -29,6 +33,11 @@ public class CalendarEditController {
     	this.calendar = calendar;
         editTextArea.setText(calendar.getText());
     }
+
+	@FXML
+	private void handleClose(ActionEvent event) throws IOException {
+		Platform.exit();
+	}
 	
     @FXML
 	private void initialize() {
