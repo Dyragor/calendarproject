@@ -15,7 +15,7 @@ public class CalendarEditController {
 	private TextArea editTextArea;
 	
 	@FXML
-	private Button okEditButton;
+	private Button closeButton;
 	
 	private	Stage stage;
 	
@@ -33,15 +33,12 @@ public class CalendarEditController {
     	this.calendar = calendar;
         editTextArea.setText(calendar.getText());
     }
-
-	@FXML
-	private void handleClose(ActionEvent event) throws IOException {
-		Platform.exit();
-	}
 	
     @FXML
 	private void initialize() {
-
+    	closeButton.setOnAction((event) -> {
+    		stage.close();
+		});
     }
 }
 
