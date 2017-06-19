@@ -36,7 +36,6 @@ public class CalendarEditController {
 	
     @FXML
 	private void initialize() {
-
     	closeButton.setOnAction((event) -> {
     		stage.close();
 		});
