@@ -18,13 +18,12 @@
               <menus>
                 <Menu mnemonicParsing="false" text="Datei">
                   <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleEditNotiz" text="Edit Note" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteNotiz" text="Delete Note" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleEditNotiz" text="Hilfe" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleDeleteNotiz" text="Beenden" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
-            <ListView fx:id="myListView" layoutX="33.0" layoutY="49.0" prefHeight="320.0" prefWidth="967.0" />
          </children>
       </Pane>
    </children>
