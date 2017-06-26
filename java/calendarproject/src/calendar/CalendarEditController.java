@@ -98,7 +98,7 @@ public class CalendarEditController {
 			Stage stage;
 			AnchorPane root;
 
-			FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
+			FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
 			root = (AnchorPane) myLoader.load();
 			CalendarEditController controller = (CalendarEditController) myLoader.getController();
 			controller.setAppointment(selectedAppointment);
@@ -135,14 +135,14 @@ public class CalendarEditController {
 		Stage stage;
 		AnchorPane root;
 
-		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
+		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
 		root = (AnchorPane) myLoader.load();
 		CalendarEditController controller = (CalendarEditController) myLoader.getController();
 		controller.setAppointment(newNote);
 
 		stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("New Note Dialog");
+		stage.setTitle("New Appointment Dialog");
 		stage.initModality(Modality.APPLICATION_MODAL);
 
 		stage.initOwner(prevStage);
