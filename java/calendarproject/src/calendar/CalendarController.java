@@ -87,7 +87,7 @@ public class CalendarController {
 	@FXML
 	private Button daythone;
 
-	private Month month = Month.JANUARY;
+	private Month month;
 
     public void setPrevStage(Stage stage){
          this.prevStage = stage;
@@ -116,7 +116,7 @@ public class CalendarController {
 
 		stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("//TODO: DATUM");
+		stage.setTitle("Wer das liest ist dumm");
 		stage.initModality(Modality.APPLICATION_MODAL);
 
 		stage.initOwner(prevStage);
