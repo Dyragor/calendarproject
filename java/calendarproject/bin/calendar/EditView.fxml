@@ -8,11 +8,11 @@
 
 <AnchorPane prefHeight="549.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendar.CalendarEditController">
    <children>
-      <ListView layoutX="29.0" layoutY="65.0" prefHeight="426.0" prefWidth="690.0" />
+      <ListView fx:id="myListView" layoutX="29.0" layoutY="65.0" prefHeight="426.0" prefWidth="690.0" />
       <Label alignment="CENTER" layoutX="29.0" layoutY="14.0" prefHeight="42.0" prefWidth="690.0" text="Label" />
-      <Button layoutX="742.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Neu" />
-      <Button layoutX="742.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Bearbeiten" />
-      <Button layoutX="742.0" layoutY="137.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Löschen" />
+      <Button layoutX="742.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleNewAppointment" prefHeight="25.0" prefWidth="102.0" text="Neu" />
+      <Button layoutX="742.0" layoutY="101.0" mnemonicParsing="false" onAction="#handleEditAppointment" prefHeight="25.0" prefWidth="102.0" text="Bearbeiten" />
+      <Button layoutX="742.0" layoutY="137.0" mnemonicParsing="false" onAction="#handleDeleteAppointment" prefHeight="25.0" prefWidth="102.0" text="Löschen" />
       <Button fx:id="closeButton" layoutX="742.0" layoutY="504.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Schliessen" />
    </children>
 </AnchorPane>
