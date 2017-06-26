@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -14,7 +15,7 @@
    <children>
       <Pane layoutX="-120.0" layoutY="-129.0" prefHeight="573.0" prefWidth="1034.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1034.0">
+            <MenuBar layoutY="2.0" prefHeight="32.0" prefWidth="1034.0">
               <menus>
                 <Menu mnemonicParsing="false" text="Datei">
                   <items>
@@ -24,7 +25,130 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Button layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleEditDay" text="Test" />
+            <Button fx:id="dayone" layoutX="170.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwo" layoutX="269.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daythree" layoutX="368.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayfour" layoutX="467.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="4">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayfive" layoutX="566.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daysix" layoutX="665.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="6">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayseven" layoutX="764.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="7">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayfourteen" layoutX="764.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="14">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daythirteen" layoutX="665.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="13">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwelve" layoutX="566.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="12">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayeleven" layoutX="467.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="11">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayten" layoutX="368.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="10">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daynine" layoutX="269.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="9">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayeight" layoutX="170.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="8">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayfifteen" layoutX="170.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="15">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daysixteen" layoutX="269.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="16">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayseventeen" layoutX="368.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="17">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="dayeighteen" layoutX="467.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="18">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daynineteen" layoutX="566.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="19">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwenty" layoutX="665.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="20">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwone" layoutX="764.0" layoutY="245.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="21">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytweight" layoutX="764.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="28">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwseven" layoutX="665.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="27">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwsix" layoutX="566.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="26">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwfive" layoutX="467.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="25">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwfour" layoutX="368.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="24">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwthree" layoutX="269.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="23">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwtwo" layoutX="170.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="22">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daytwnine" layoutX="170.0" layoutY="435.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="29">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daythirty" layoutX="269.0" layoutY="435.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="30">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="daythone" layoutX="368.0" layoutY="435.0" mnemonicParsing="false" onAction="#handleEditDay" prefHeight="70.0" prefWidth="100.0" text="31">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
          </children>
       </Pane>
    </children>
