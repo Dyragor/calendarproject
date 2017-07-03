@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
 <?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="509.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendar.CalendarEditController">
+<AnchorPane prefHeight="509.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calendar.CalendarEditAppointmentController">
    <children>
       <Button layoutX="424.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Sichern" />
-      <Button layoutX="501.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Abbrechen" />
-      <TextField layoutX="16.0" layoutY="153.0" prefHeight="290.0" prefWidth="561.0" />
-      <TextField layoutX="14.0" layoutY="23.0" prefHeight="44.0" prefWidth="449.0" text="Titel" />
-      <TextField layoutX="16.0" layoutY="94.0" prefHeight="25.0" prefWidth="206.0" text="Zeit von" />
-      <TextField layoutX="254.0" layoutY="94.0" prefHeight="25.0" prefWidth="206.0" text="Zeit bis" />
+      <Button fx:id="closeButton" layoutX="501.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="77.0" text="Abbrechen" />
+      <TextField fx:id="editTextArea" alignment="TOP_LEFT" layoutX="16.0" layoutY="153.0" prefHeight="290.0" prefWidth="561.0" promptText="Beschreibung" />
+      <TextField layoutX="14.0" layoutY="23.0" prefHeight="44.0" prefWidth="449.0" promptText="Titel" />
+      <TextField layoutX="16.0" layoutY="94.0" prefHeight="25.0" prefWidth="206.0" promptText="Zeit von" />
+      <TextField layoutX="254.0" layoutY="94.0" prefHeight="25.0" prefWidth="206.0" promptText="Zeit bis" />
       <CheckBox layoutX="493.0" layoutY="98.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="101.0" text="Ganztägig" />
    </children>
 </AnchorPane>

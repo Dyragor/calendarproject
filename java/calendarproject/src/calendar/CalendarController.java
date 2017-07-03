@@ -2,17 +2,12 @@ package calendar;
 
 import java.io.IOException;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -108,15 +103,16 @@ public class CalendarController {
 		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
 		root = myLoader.load();
 		CalendarEditController controller = myLoader.getController();
-		controller.setMain(main);
+
 		stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("Wer das liest ist dumm");
+		stage.setTitle("Appointments");
 		stage.initModality(Modality.APPLICATION_MODAL);
 
 		stage.initOwner(prevStage);
+		controller.setMain(main);
 		controller.setPrevStage(stage);
-		stage.showAndWait();
+		stage.show();
     }
 
 
