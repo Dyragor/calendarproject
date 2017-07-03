@@ -43,16 +43,12 @@ public class CalendarEditController {
     	this.calendar = calendar;
         editTextArea.setText(calendar.getText());
     }
-	
     @FXML
 	private void initialize() {
     	closeButton.setOnAction((event) -> {
     		stage.close();
 		});
     }
-
-
-
 
 
 	public void setAppointment(Appointment appointment) {
