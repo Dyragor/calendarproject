@@ -101,11 +101,6 @@ public class CalendarController {
 	}
 
 	@FXML
-    private void handleDeleteNotiz(ActionEvent event) throws IOException {
-
-    }
-
-	@FXML
     private void handleEditDay(ActionEvent event) throws IOException {
 		Stage stage;
 		AnchorPane root;

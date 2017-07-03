@@ -18,7 +18,6 @@ public class Main extends Application {
             controller.setPrevStage(primaryStage);
             controller.setMain(this);
             Scene scene = new Scene(root, 1034, 573);
-            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setTitle("Calenderproject");
             primaryStage.setScene(scene);
             primaryStage.show();
