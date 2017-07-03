@@ -32,8 +32,6 @@ public class CalendarEditAppointmentController {
 
     private Appointment appointment;
 
-    private Calendar calendar;
-
     public void setPrevStage(Stage stage){
         this.prevStage = stage;
     }
@@ -43,32 +41,19 @@ public class CalendarEditAppointmentController {
         listViewData.add(new Appointment("Hausaufgaben"));
     }
 
-    public void setCalendar(Calendar calendar) {
-        this.calendar = calendar;
-        editTextArea.setText(calendar.getText());
-    }
-    @FXML
-    private void initialize() {
-        closeButton.setOnAction((event) -> {
-            prevStage.close();
-        });
-    }
-
-
     public void setAppointment(Appointment appointment) {
         this.appointment = appointment;
         editTextArea.setText(appointment.getText());
+    }
+    @FXML
+    private void initialize() {
+
     }
 
     public void setMain(Main main){
         this.main = main;
     }
 
-    @FXML
-    private void handleEditAppointment(ActionEvent event) throws IOException {
-
-
-    }
 
 }
 

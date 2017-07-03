@@ -31,8 +31,6 @@ public class CalendarEditController {
 	private Main main;
 
 	private Appointment appointment;
-	
-	private Calendar calendar;
 
     public void setPrevStage(Stage stage){
          this.prevStage = stage;
@@ -46,21 +44,26 @@ public class CalendarEditController {
 		listViewData.add(new Appointment("Essen am Samstag"));
 		listViewData.add(new Appointment("Hausaufgaben"));
 	}
-	
-    public void setCalendar(Calendar calendar) {
-    	this.calendar = calendar;
-        editTextArea.setText(calendar.getText());
-    }
+
     @FXML
 	private void initialize() {
+		myListView.setItems(listViewData);
 
+		myListView.setCellFactory((list) -> {
+			return new ListCell<Appointment>() {
+				@Override
+				protected void updateItem(Appointment item, boolean empty) {
+					super.updateItem(item, empty);
+
+					if (item == null || empty) {
+						setText(null);
+					} else {
+						setText(item.getDate() + "  :  " + item.getText());
+					}
+				}
+			};
+		});
     }
-
-
-	public void setAppointment(Appointment appointment) {
-		this.appointment = appointment;
-		editTextArea.setText(appointment.getText());
-	}
 
 	@FXML
 	private void handleDeleteAppointment(ActionEvent event) throws IOException {
@@ -71,14 +74,7 @@ public class CalendarEditController {
 			myListView.refresh();
 
 		} else {
-			// Nothing selected.
-			Alert alert = new Alert(Alert.AlertType.WARNING);
-			alert.initOwner(prevStage);
-			alert.setTitle("No Selection");
-			alert.setHeaderText("No Appointment selected");
-			alert.setContentText("Select an Appointment first");
-
-			alert.showAndWait();
+			nothingSelected();
 		}
 	}
 
@@ -107,21 +103,24 @@ public class CalendarEditController {
 			myListView.refresh();
 
 		} else {
-			// Nothing selected.
-			Alert alert = new Alert(Alert.AlertType.WARNING);
-			alert.initOwner(prevStage);
-			alert.setTitle("No Selection");
-			alert.setHeaderText("No Appointment selected");
-			alert.setContentText("Select an Appointment first");
-
-			alert.showAndWait();
+			nothingSelected();
 		}
+	}
+
+	private void nothingSelected(){
+		Alert alert = new Alert(Alert.AlertType.WARNING);
+		alert.initOwner(prevStage);
+		alert.setTitle("No Selection");
+		alert.setHeaderText("No Appointment selected");
+		alert.setContentText("Select an Appointment first");
+
+		alert.showAndWait();
 	}
 
 	@FXML
 	private void handleNewAppointment(ActionEvent event) throws IOException {
-		Appointment newNote = new Appointment();
-		listViewData.add(newNote);
+		Appointment newAppointment = new Appointment();
+		listViewData.add(newAppointment);
 
 		Stage stage;
 		AnchorPane root;
@@ -129,10 +128,11 @@ public class CalendarEditController {
 		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
 		root = myLoader.load();
 		CalendarEditAppointmentController controller = myLoader.getController();
-		controller.setMain(main);
+		controller.setAppointment(newAppointment);
+
 		stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("Edit Appointment");
+		stage.setTitle("Wer das liest ist dumm");
 		stage.initModality(Modality.APPLICATION_MODAL);
 
 		stage.initOwner(prevStage);
