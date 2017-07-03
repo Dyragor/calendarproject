@@ -106,7 +106,7 @@ public class CalendarController {
     }
 
 	@FXML
-    private void handleEditDay(ActionEvent event, String name) throws IOException {
+    private void handleEditDay(ActionEvent event) throws IOException {
 		Stage stage;
 		AnchorPane root;
 
