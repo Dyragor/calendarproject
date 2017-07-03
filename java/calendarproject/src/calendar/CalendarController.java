@@ -108,7 +108,7 @@ public class CalendarController {
 		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditView.fxml"));
 		root = myLoader.load();
 		CalendarEditController controller = myLoader.getController();
-
+		controller.setMain(main);
 		stage = new Stage();
 		stage.setScene(new Scene(root));
 		stage.setTitle("Wer das liest ist dumm");
