@@ -126,6 +126,7 @@ public class CalendarController {
 		stage.initOwner(prevStage);
 		controller.setMain(main);
 		controller.setPrevStage(stage);
+		controller.setDay("1.1");
 		stage.show();
     }
 

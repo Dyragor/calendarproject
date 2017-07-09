@@ -29,6 +29,7 @@ public class CalendarEditController {
     private ObservableList<Appointment> listViewData = FXCollections.observableArrayList();
     private Stage prevStage;
     private Main main;
+    private String date;
 
     public void setPrevStage(Stage stage) {
         this.prevStage = stage;
@@ -36,6 +37,10 @@ public class CalendarEditController {
 
     public void setMain(Main main) {
         this.main = main;
+    }
+
+    public void setDay(String date){
+        this.date = date;
     }
 
     /**
