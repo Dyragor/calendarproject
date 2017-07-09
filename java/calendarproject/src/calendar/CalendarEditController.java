@@ -12,7 +12,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ *  Calendarproject
+ *
+ * @author Simon Kunz, Andreas Schranz
+ * @version 1.0
+ *
+ */
 public class CalendarEditController {
 
     @FXML
@@ -24,8 +30,6 @@ public class CalendarEditController {
     private Stage prevStage;
     private Main main;
 
-    private Appointment appointment;
-
     public void setPrevStage(Stage stage) {
         this.prevStage = stage;
     }
@@ -34,11 +38,18 @@ public class CalendarEditController {
         this.main = main;
     }
 
+    /**
+     * Constructor which adds some test appointments
+     * @throws IOException
+     */
     public CalendarEditController() throws IOException {
         listViewData.add(new Appointment("Mittagessen","Essen am Samstag", false, "01:00", "03:00"));
         listViewData.add(new Appointment("Hausaufgaben","Mathematik ueben", true, "13:00", "14:00"));
     }
 
+    /**
+     * Initializes the GUI which shows all appointments of the day.
+     */
     @FXML
     private void initialize() {
 
@@ -60,8 +71,13 @@ public class CalendarEditController {
         });
     }
 
+    /**
+     * Method for deleting the appointments.
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void handleDeleteAppointment(ActionEvent event) throws IOException {
+    public void handleDeleteAppointment(ActionEvent event) throws IOException {
         Appointment selectedNotiz = myListView.getSelectionModel().getSelectedItem();
         if (selectedNotiz != null) {
 
@@ -73,8 +89,14 @@ public class CalendarEditController {
         }
     }
 
+    /**
+     * Method for editing the selected appointment which opens a GUI for editing or
+     * if nothing selected a new window with the hint.
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void handleEditAppointment(ActionEvent event) throws IOException {
+    public void handleEditAppointment(ActionEvent event) throws IOException {
         Appointment selectedAppointment = myListView.getSelectionModel().getSelectedItem();
         if (selectedAppointment != null) {
             Stage stage;
@@ -101,6 +123,9 @@ public class CalendarEditController {
         }
     }
 
+    /**
+     * The method is called if no appointment is selected selected it opens a window with a hint.
+     */
     private void nothingSelected() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.initOwner(prevStage);
@@ -111,8 +136,13 @@ public class CalendarEditController {
         alert.showAndWait();
     }
 
+    /**
+     * Method for creating new Appointments which opens a new GUI for that.
+     * @param event
+     * @throws IOException
+     */
     @FXML
-    private void handleNewAppointment(ActionEvent event) throws IOException {
+    public void handleNewAppointment(ActionEvent event) throws IOException {
         Appointment newAppointment = new Appointment();
         listViewData.add(newAppointment);
 
@@ -134,6 +164,7 @@ public class CalendarEditController {
         stage.showAndWait();
 
         myListView.refresh();
+
     }
 
 }

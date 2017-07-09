@@ -3,7 +3,13 @@ package calendar;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
+/**
+ *  Calendarproject
+ *
+ * @author Simon Kunz, Andreas Schranz
+ * @version 1.0
+ *
+ */
 public class CalendarEditAppointmentController {
 
     @FXML

@@ -5,7 +5,11 @@ import javafx.beans.property.*;
 import java.time.LocalDate;
 
 /**
- * Created by 5ia15sikunz on 26.06.2017.
+ *  Calendarproject
+ *
+ * @author Simon Kunz, Andreas Schranz
+ * @version 1.0
+ *
  */
 public class Appointment {
     private StringProperty text;
@@ -16,10 +20,6 @@ public class Appointment {
 
     public ObjectProperty<LocalDate> datumProperty() {
         return datum;
-    }
-
-    public void setDatum(LocalDate datum) {
-        this.datum.set(datum);
     }
 
     public boolean isWholeDay() {

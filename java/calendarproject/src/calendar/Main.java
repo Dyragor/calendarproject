@@ -6,8 +6,18 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
-
+/**
+ *  Calendarproject
+ *
+ * @author Simon Kunz, Andreas Schranz
+ * @version 1.0
+ *
+ */
 public class Main extends Application {
+    /**
+     * Starts the GUI Application
+     * @param primaryStage
+     */
     @Override
     public void start(Stage primaryStage) {
         try {

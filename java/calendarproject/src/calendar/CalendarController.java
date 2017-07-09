@@ -15,6 +15,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/**
+ *  Calendarproject
+ *
+ * @author Simon Kunz, Andreas Schranz
+ * @version 1.0
+ *
+ */
 public class CalendarController {
 
 	@FXML
