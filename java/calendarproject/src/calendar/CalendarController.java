@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -81,8 +82,14 @@ public class CalendarController {
 	private Button daythirty;
 	@FXML
 	private Button daythone;
+	@FXML
+	private Button monthBack;
+	@FXML
+	private Button monthForward;
+	@FXML
+	private Label monthLabel;
 
-	private Month month;
+	private Month month = Month.JANUARY;
 
     public void setPrevStage(Stage stage){
          this.prevStage = stage;
@@ -118,9 +125,82 @@ public class CalendarController {
 
 	@FXML
 	private void initialize() {
-
+    	monthLabel.setText(monthIterating(0));
+		monthForward.setOnAction((event) -> {
+			monthLabel.setText(monthIterating(1));
+			disableButtons();
+		});
+		monthBack.setOnAction((event) -> {
+			monthLabel.setText(monthIterating(-1));
+			disableButtons();
+		});
 	}
 
+	private void disableButtons(){
+    	daytwnine.setDisable(false);
+		daythirty.setDisable(false);
+		daythone.setDisable(false);
+		switch(month.length(month)){
+			case 28:
+				daythirty.setDisable(true);
+				daythone.setDisable(true);
+				daytwnine.setDisable(true);
+				break;
+			case 30:
+				daythone.setDisable(true);
+				break;
+			default:
+				break;
+		}
+	}
+
+	private String monthIterating(int forward){
+    	if(month.sequence(month) + forward == 0){
+    		forward = 11;
+		}else if(month.sequence(month) + forward == 13){
+    		forward = -11;
+		}
+    	switch(month.sequence(month) + forward){
+			case 1:
+				month = Month.JANUARY;
+				return "Januar";
+			case 2:
+				month = Month.FEBRUARY;
+				return "Februar";
+			case 3:
+				month = Month.MARS;
+				return "März";
+			case 4:
+				month = Month.APRIL;
+				return "April";
+			case 5:
+				month = Month.MAY;
+				return "Mai";
+			case 6:
+				month = Month.JUNE;
+				return "Juni";
+			case 7:
+				month = Month.JULY;
+				return "Juli";
+			case 8:
+				month = Month.AUGUST;
+				return "August";
+			case 9:
+				month = Month.SEPTEMBER;
+				return "September";
+			case 10:
+				month = Month.OCTOBER;
+				return "Oktober";
+			case 11:
+				month = Month.NOVEMBER;
+				return "November";
+			case 12:
+				month = Month.DECEMBER;
+				return "Dezember";
+			default:
+				return "ERROR";
+		}
+	}
 
 	@FXML
     private void handleClose(ActionEvent event) throws IOException {

@@ -10,7 +10,17 @@ public class CalendarEditAppointmentController {
     private TextField editTextArea;
 
     @FXML
+    private TextField editVon;
+    @FXML
+    private TextField editBis;
+    @FXML
+    private TextField editTitle;
+    @FXML
+    private CheckBox editWholeDay;
+    @FXML
     private Button closeButton;
+    @FXML
+    private Button okEditButton;
 
     @FXML
     private	Stage prevStage;
@@ -27,10 +37,23 @@ public class CalendarEditAppointmentController {
     public void setAppointment(Appointment appointment) {
         this.appointment = appointment;
         editTextArea.setText(appointment.getText());
+        editBis.setText(appointment.getEndTime());
+        editVon.setText(appointment.getStartTime());
+        editTitle.setText(appointment.getTitle());
+        editTitle.setText(appointment.getTitle());
+        editWholeDay.setSelected(appointment.isWholeDay());
     }
     @FXML
     private void initialize() {
         closeButton.setOnAction((event) -> prevStage.close());
+        okEditButton.setOnAction((event) -> {
+            appointment.setTitle(editTitle.getText());
+            appointment.setStartTime(editVon.getText());
+            appointment.setEndTime(editBis.getText());
+            appointment.setWholeDay(editWholeDay.isSelected());
+            appointment.setText(editTextArea.getText());
+            prevStage.close();
+        });
     }
 
 

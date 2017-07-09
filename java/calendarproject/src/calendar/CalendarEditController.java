@@ -15,38 +15,38 @@ import java.io.IOException;
 
 public class CalendarEditController {
 
-	@FXML
-	private Button closeButton;
-
-	@FXML
-	private ListView<Appointment> myListView;
-	private ObservableList<Appointment> listViewData = FXCollections.observableArrayList();
-	private	Stage prevStage;
-	private Main main;
-
-	private Appointment appointment;
-
-    public void setPrevStage(Stage stage){
-         this.prevStage = stage;
-    }
-
-	public void setMain(Main main){
-		this.main = main;
-	}
-
-	public CalendarEditController() throws IOException{
-		listViewData.add(new Appointment("Essen am Samstag"));
-		listViewData.add(new Appointment("Hausaufgaben"));
-	}
+    @FXML
+    private Button closeButton;
 
     @FXML
-	private void initialize() {
+    private ListView<Appointment> myListView;
+    private ObservableList<Appointment> listViewData = FXCollections.observableArrayList();
+    private Stage prevStage;
+    private Main main;
 
-		myListView.setItems(listViewData);
+    private Appointment appointment;
 
-		closeButton.setOnAction((event) -> prevStage.close());
+    public void setPrevStage(Stage stage) {
+        this.prevStage = stage;
+    }
 
-		myListView.setCellFactory((list) -> new ListCell<Appointment>() {
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public CalendarEditController() throws IOException {
+        listViewData.add(new Appointment("Mittagessen","Essen am Samstag", false, "01:00", "03:00"));
+        listViewData.add(new Appointment("Hausaufgaben","Mathematik ueben", true, "13:00", "14:00"));
+    }
+
+    @FXML
+    private void initialize() {
+
+        myListView.setItems(listViewData);
+
+        closeButton.setOnAction((event) -> prevStage.close());
+
+        myListView.setCellFactory((list) -> new ListCell<Appointment>() {
             @Override
             protected void updateItem(Appointment item, boolean empty) {
                 super.updateItem(item, empty);
@@ -54,86 +54,86 @@ public class CalendarEditController {
                 if (item == null || empty) {
                     setText(null);
                 } else {
-                    setText(item.getDate() + "  :  " + item.getText());
+                    setText(item.getTitle() + "\t" + item.getStartTime() + "\t" + item.getEndTime() + "\t Ganztägig: "+ item.isWholeDay()+ "\t"+ item.getText());
                 }
             }
         });
     }
 
-	@FXML
-	private void handleDeleteAppointment(ActionEvent event) throws IOException {
-		Appointment selectedNotiz = myListView.getSelectionModel().getSelectedItem();
-		if (selectedNotiz != null) {
+    @FXML
+    private void handleDeleteAppointment(ActionEvent event) throws IOException {
+        Appointment selectedNotiz = myListView.getSelectionModel().getSelectedItem();
+        if (selectedNotiz != null) {
 
-			listViewData.remove(selectedNotiz);
-			myListView.refresh();
+            listViewData.remove(selectedNotiz);
+            myListView.refresh();
 
-		} else {
-			nothingSelected();
-		}
-	}
+        } else {
+            nothingSelected();
+        }
+    }
 
-	@FXML
-	private void handleEditAppointment(ActionEvent event) throws IOException {
-		Appointment selectedAppointment = myListView.getSelectionModel().getSelectedItem();
-		if (selectedAppointment != null) {
-			Stage stage;
-			AnchorPane root;
+    @FXML
+    private void handleEditAppointment(ActionEvent event) throws IOException {
+        Appointment selectedAppointment = myListView.getSelectionModel().getSelectedItem();
+        if (selectedAppointment != null) {
+            Stage stage;
+            AnchorPane root;
 
-			FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
-			root = myLoader.load();
-			CalendarEditAppointmentController controller = myLoader.getController();
-			controller.setAppointment(selectedAppointment);
+            FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
+            root = myLoader.load();
+            CalendarEditAppointmentController controller = myLoader.getController();
+            controller.setAppointment(selectedAppointment);
 
-			stage = new Stage();
-			stage.setScene(new Scene(root));
-			stage.setTitle("Edit Note Dialog");
-			stage.initModality(Modality.APPLICATION_MODAL);
+            stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Edit Note Dialog");
+            stage.initModality(Modality.APPLICATION_MODAL);
 
-			stage.initOwner(prevStage);
-			controller.setPrevStage(stage);
-			stage.showAndWait();
+            stage.initOwner(prevStage);
+            controller.setPrevStage(stage);
+            stage.showAndWait();
 
-			myListView.refresh();
+            myListView.refresh();
 
-		} else {
-			nothingSelected();
-		}
-	}
+        } else {
+            nothingSelected();
+        }
+    }
 
-	private void nothingSelected(){
-		Alert alert = new Alert(Alert.AlertType.WARNING);
-		alert.initOwner(prevStage);
-		alert.setTitle("No Selection");
-		alert.setHeaderText("No Appointment selected");
-		alert.setContentText("Select an Appointment first");
+    private void nothingSelected() {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.initOwner(prevStage);
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No Appointment selected");
+        alert.setContentText("Select an Appointment first");
 
-		alert.showAndWait();
-	}
+        alert.showAndWait();
+    }
 
-	@FXML
-	private void handleNewAppointment(ActionEvent event) throws IOException {
-		Appointment newAppointment = new Appointment();
-		listViewData.add(newAppointment);
+    @FXML
+    private void handleNewAppointment(ActionEvent event) throws IOException {
+        Appointment newAppointment = new Appointment();
+        listViewData.add(newAppointment);
 
-		Stage stage;
-		AnchorPane root;
+        Stage stage;
+        AnchorPane root;
 
-		FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
-		root = myLoader.load();
-		CalendarEditAppointmentController controller = myLoader.getController();
-		controller.setAppointment(newAppointment);
+        FXMLLoader myLoader = new FXMLLoader(main.getClass().getResource("EditAppointment.fxml"));
+        root = myLoader.load();
+        CalendarEditAppointmentController controller = myLoader.getController();
+        controller.setAppointment(newAppointment);
 
-		stage = new Stage();
-		stage.setScene(new Scene(root));
-		stage.setTitle("Edit Appointment");
-		stage.initModality(Modality.APPLICATION_MODAL);
+        stage = new Stage();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Edit Appointment");
+        stage.initModality(Modality.APPLICATION_MODAL);
 
-		stage.initOwner(prevStage);
-		controller.setPrevStage(stage);
-		stage.showAndWait();
+        stage.initOwner(prevStage);
+        controller.setPrevStage(stage);
+        stage.showAndWait();
 
-		myListView.refresh();
-	}
+        myListView.refresh();
+    }
 
 }
